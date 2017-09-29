@@ -45,10 +45,10 @@ Microkernel
 
 
 # I/O Bound
-Dispositivos, como por exemplo gravar um arquivo no Pen drive o uso do CPU é baixo, e ele fica em espera. Aguardando o momento pra ser utilizado
+Dispositivos, como por exemplo gravar um arquivo no Pen drive o uso do CPU é baixo, e ele fica em espera. Aguardando o momento pra ser utilizado (Processos que irão ficar mais tempo sendo executados.)
 
 # CPU Bound
-Usa uma capacidade elevada do processador e ele alterna entre pronto e execução, 
+Usa uma capacidade elevada do processador e ele alterna entre pronto e execução (Processos que irão ficar mais tempo sendo executados)
 
 
 # O que é o núcleo do sistema e quais são suas principais funções?

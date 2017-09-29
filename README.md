@@ -107,15 +107,15 @@ Para que seja implementado a concorrência de diversos programas e atendam múlt
  
  
  # Compartilhar memória pode acarretar em danos sérios, com isso algumas técnicas foram desenvolvidas para evitar danos maiores
- * Exclusão mutua, que evita que multiplos processos escrevam na mesma região de memória, durante a sessão critica;
- * Sessão critica: Momento de uso de uma parte da memória por um processo.
- * Há também soluções de hardware e software para resolver estes problemas.
+ * Exclusão mutua: multiplos processos não podem escrever na mesma região de memória, durante a sessão critica;
+ * Sessão critica: É utilizado uma parte de memoria por algum processo
+ * Lembrando que existem soluções de software e hardware para solucionar problemas.
 
  * Algoritimos para a aplicação da exclusão mutua:
-  * * Primeiro algoritimo:
-  * * Segundo algoritimo:
-  * * Terceiro algoritimo:
-  * * Quarto algoritimo:
-  * * Dekker:
-  * * Peterson:
+   * Primeiro algoritimo:
+   * Segundo algoritimo:
+   * Terceiro algoritimo:
+   * Quarto algoritimo:
+   * Dekker:
+   * Peterson:
 

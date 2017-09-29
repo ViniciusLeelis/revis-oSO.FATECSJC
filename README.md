@@ -5,11 +5,20 @@ Um breve resumo da aula de Sistema Operacional
 
 # Tipos de sistemas operacionais
  * Sistemas monoprogramáveis / Monotarefa;
+ Os primeiros sistemas operacionais, realizavam apenas, uma tarefa por vez, fazendo que todo o potencial existente na maquina era reservado apenas para um processo, tais sistemas receberam o nome de sistemas monoprogramáveis (ou monotarefa)
+ 
  * Sistemas multiprogramáveis / Multitarefa;
- * Sistemas com múltiplos processadores.
- * Sistema batch
- * Sistemas de tempo real
- * Sistemas de tempo compartilhado
+ Aqui já é diferente, ele é uma evolução dos sistemas monoprogramáveis, sendo possível a execução de mais de um processo por vez, e mesmo assim existe o compartilhamento de recursos da maquina.
+ 
+  Podemos citar como exemplo:
+  
+   Enquanto você está escrevendo em um arquivo de texto, e o sistema está captando todas essas informações, existe outro processo que está armazenando ou copiando arquivos em disco, detalhe: O custo é reduzido em comparação ao antigo monotarefa. Mesmo sendo mais rápido, ele acabou sendo mais complexo.
+   
+  * Os sistemas multitarefas podem ser divididos em três tipos: 
+        * Sistema batch
+        * Sistemas de tempo real
+        * Sistemas de tempo compartilhado
+     
  * Sistemas com múltiplos processadores
  * Sistemas fortemente acoplados
  * Sistemas fracamente acoplados
@@ -82,7 +91,7 @@ Vantagens: desempenho, mais rápidos de criar e destruír, simplifica o modelo d
 Dispositivos, como por exemplo gravar um arquivo no Pen drive o uso do CPU é baixo, e ele fica em espera. Aguardando o momento pra ser utilizado (Processos que irão ficar mais tempo sendo executados.)
 
 # CPU Bound
-Usa uma capacidade elevada do processador e ele alterna entre pronto e execução (Processos que irão ficar mais tempo sendo executados)
+Usa uma capacidade elevada do processador e ele alterna entre pronto e execução (Processos que irão ficar menos tempo sendo executado, curto prazo de tempo)
 
 
 

@@ -4,24 +4,22 @@ Um breve resumo da aula de Sistema Operacional
 
 
 # Tipos de sistemas operacionais
-     # Sistemas monoprogramáveis / Monotarefa;
- Os primeiros sistemas operacionais, realizavam apenas, uma tarefa por vez, fazendo que todo o potencial existente na maquina era reservado apenas para um processo, tais sistemas receberam o nome de sistemas monoprogramáveis (ou monotarefa)
+      Sistemas monoprogramáveis / Monotarefa;
+     Os primeiros sistemas operacionais, realizavam apenas, uma tarefa por vez, fazendo que todo o potencial existente na maquina era reservado apenas para um processo, tais sistemas receberam o nome de sistemas monoprogramáveis (ou monotarefa)
  
      # Sistemas multiprogramáveis / Multitarefa;
- Aqui já é diferente, ele é uma evolução dos sistemas monoprogramáveis, sendo possível a execução de mais de um processo por vez, e mesmo assim existe o compartilhamento de recursos da maquina.
+      Aqui já é diferente, ele é uma evolução dos sistemas monoprogramáveis, sendo possível a execução de mais de um processo por vez, e mesmo assim existe o compartilhamento de recursos da maquina.
  
-     # Sistemas com múltiplos processadores.
- 
-  Podemos citar como exemplo:
+     Podemos citar como exemplo:
   
-   Enquanto você está escrevendo em um arquivo de texto, e o sistema está captando todas essas informações, existe outro processo que está armazenando ou copiando arquivos em disco, detalhe: O custo é reduzido em comparação ao antigo monotarefa. Mesmo sendo mais rápido, ele acabou sendo mais complexo.
+     Enquanto você está escrevendo em um arquivo de texto, e o sistema está captando todas essas informações, existe outro processo que está armazenando ou copiando arquivos em disco, detalhe: O custo é reduzido em comparação ao antigo monotarefa. Mesmo sendo mais rápido, ele acabou sendo mais complexo.
    
-  * Os sistemas multitarefas podem ser divididos em três tipos: 
+    * Os sistemas multitarefas podem ser divididos em três tipos: 
         * Sistema batch
         * Sistemas de tempo real
         * Sistemas de tempo compartilhado
      
- * Sistemas com múltiplos processadores
+    # Sistemas com múltiplos processadores
  * Sistemas fortemente acoplados
  * Sistemas fracamente acoplados
  * 

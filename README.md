@@ -1,6 +1,20 @@
 # revis-oSO.FATECSJC
 Um breve resumo da aula de Sistema Operacional
 
+
+
+# Tipos de sistemas operacionais
+ * Sistemas monoprogramáveis / Monotarefa;
+ * Sistemas multiprogramáveis / Multitarefa;
+ * Sistemas com múltiplos processadores.
+ * Sistema batch
+ * Sistemas de tempo real
+ * Sistemas de tempo compartilhado
+ * Sistemas com múltiplos processadores
+ * Sistemas fortemente acoplados
+ * Sistemas fracamente acoplados
+ * 
+
 # CACHE
 * Armazena temporariamente, informações em um processador ou disco, mantendo durante um número maior de tempo em base dos processos mais importantes
 
@@ -35,13 +49,16 @@ Vantagens: desempenho, mais rápidos de criar e destruír, simplifica o modelo d
  Exemplo: jogo é dividido em vários threads, um threads pra rodar os gráficos, outro pra rodar o som, e ambos funcionam de forma simultânea
 
 
-Microkernel
+# Microkernel
 
 
+# Problema do barbeiro
 
+# Problema dos filósofos
 
+# Semáfaros
 
-
+# Deadlock
 
 
 # I/O Bound
@@ -49,6 +66,15 @@ Dispositivos, como por exemplo gravar um arquivo no Pen drive o uso do CPU é ba
 
 # CPU Bound
 Usa uma capacidade elevada do processador e ele alterna entre pronto e execução (Processos que irão ficar mais tempo sendo executados)
+
+
+# Dê um exemplo que apresente todas as mudanças de estado de um processo, juntamente com o evento associado a cada mudança.
+
+#  Diferencie processos multithreads, subprocessos e processos independentes.
+
+# Qual a relação entre processo e arquitetura microkernel ?
+
+# Justifique com um exemplo a frase "o sinal está para o processo assim como as interrupções e exceções estão para o sistema operacional"
 
 
 # O que é o núcleo do sistema e quais são suas principais funções?

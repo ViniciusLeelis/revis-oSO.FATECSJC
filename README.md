@@ -4,11 +4,13 @@ Um breve resumo da aula de Sistema Operacional
 
 
 # Tipos de sistemas operacionais
- * Sistemas monoprogramáveis / Monotarefa;
+     # Sistemas monoprogramáveis / Monotarefa;
  Os primeiros sistemas operacionais, realizavam apenas, uma tarefa por vez, fazendo que todo o potencial existente na maquina era reservado apenas para um processo, tais sistemas receberam o nome de sistemas monoprogramáveis (ou monotarefa)
  
- * Sistemas multiprogramáveis / Multitarefa;
+     # Sistemas multiprogramáveis / Multitarefa;
  Aqui já é diferente, ele é uma evolução dos sistemas monoprogramáveis, sendo possível a execução de mais de um processo por vez, e mesmo assim existe o compartilhamento de recursos da maquina.
+ 
+     # Sistemas com múltiplos processadores.
  
   Podemos citar como exemplo:
   

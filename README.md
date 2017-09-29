@@ -60,6 +60,23 @@ Vantagens: desempenho, mais rápidos de criar e destruír, simplifica o modelo d
 
 # Deadlock
 
+# Sistemas preemptivos
+
+# Sistemas Não-preemptivos
+
+# Starvation
+
+
+# Algoritimos de escalonamento de processos
+
+* FIFO (First In, Firts Out)
+* Shortest job first (SJF)
+* Circular (Round Robin):
+* Prioridades
+* Circular com prioridade
+* Multiplas filas
+* 
+
 
 # I/O Bound
 Dispositivos, como por exemplo gravar um arquivo no Pen drive o uso do CPU é baixo, e ele fica em espera. Aguardando o momento pra ser utilizado (Processos que irão ficar mais tempo sendo executados.)
@@ -67,6 +84,9 @@ Dispositivos, como por exemplo gravar um arquivo no Pen drive o uso do CPU é ba
 # CPU Bound
 Usa uma capacidade elevada do processador e ele alterna entre pronto e execução (Processos que irão ficar mais tempo sendo executados)
 
+
+
+# EXERCÍCIOS
 
 # Dê um exemplo que apresente todas as mudanças de estado de um processo, juntamente com o evento associado a cada mudança.
 
@@ -92,6 +112,7 @@ Usa uma capacidade elevada do processador e ele alterna entre pronto e execuçã
 * Windows: cd, rmdir, rename, mkdir, copy, del, dir
  Ubuntu: cd / cp / apt-get install, update, search / ls - lista directorio / shutdown / kill / sudo
  
+
 
 
 #Atividades

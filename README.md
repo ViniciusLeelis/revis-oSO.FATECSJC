@@ -140,7 +140,12 @@ Parte do computador em que descreve seu comportamento por meio de 0 e 1s, não p
    * Depurador: Um utilitário para ajudar o usuário a encontrar erros sintáticos e lógicos no software a ser desenvolvido.
    
 # Concorrência
-* Quando vários processos são utilizados, é dado a prioridade a processos do sistema, mantendo uma concorrência entre os processos de qual deverá continuar em funcionamento
+Sistemas multiprogramaveis, diminuem a osciosidade do processador. Quando vários processos são utilizados, é dado a prioridade a processos do sistema, mantendo uma concorrência entre os processos de qual deverá continuar em funcionamento. 
+
+## Interrupções e Exceções
+TODO- não prioritário
+
+## Operações de Entrada e Saída
 
 
 # Kernel

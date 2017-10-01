@@ -98,8 +98,32 @@ Sistemas multiprocessados podem se dividir em:
 
 -------------------------------------------------------------
 
-# CACHE
-* Armazena temporariamente, informações em um processador ou disco, mantendo durante um número maior de tempo em base dos processos mais importantes
+# HARDWARE E SOFTWARE
+
+* **Hardware:** É a parte física, na maioria das vezes composta por [transistores](https://pt.wikipedia.org/wiki/Trans%C3%ADstor)
+   * Processador:
+   É responsável por executar e controlar instruções presentes na memória peincipal, através de operações aritmética (soma, subtração, divisão, multiplicação) e lógicas (comparações lóicas: E, OU, NÃO) e movimentação de dados.
+   Um processador é composto de três componentes:
+      * Unidade lógica aritmética: Realiza as instruções desejada, como somar, comparar bits entre outras instruções presente na unidade;
+      * Unidade de controle: Responsável pela gravação de dados em disco, buscar próximas instruções na memórias, entre outros.
+      * Registradores: Armazena resultados entre uma operação e outra.
+   * Memória Principal:
+   Onde as instruções e variáveis são armazenados enquanto necessárias para o processamento. Uma memória é organizada em celulas e o tamanho máximo é definido pela largura do barramento 2³² em um sistema com barramento de 32 bits.
+   
+   O endereço que será acessado é dado a partir de um registrador especifico, o MAR (Memory Address Register). Há também o MBR (Memory Buffer Register) que é usado para armazenar dados temporários ou antes de uma transferência para o disco.
+   * Memória Secundária:
+   Meio para manter o dado armazenado de forma relativamente permanente, atualmente o meio mais utilizado é o HD.
+   * Memória Cache:
+   Armazena temporariamente, informações em um processador ou disco, mantendo durante um número maior de tempo em base dos processos mais importantes
+   * Dispositivos de entrada e saída:
+   TODO
+   * Barramento:
+Linha que trafega os 0 e 1 na máquina, conunicando-se com todos os componentes de hardware 
+Ex: PCI-E
+DDR3 / DDR4 
+ 
+* **Software:**
+Parte do computador em que descreve seu comportamento por meio de 0 e 1s, não podemos ver ou tocar, mas podemos observar seu comportamento por meio dos dispositivos de entrada e saída.
 
 # BUFFER
 * Armazena arquivos temporariamente do dispositivo em questão
@@ -108,11 +132,6 @@ Exemplo: caixa de som, armazena um pouco do áudio pra depois reproduzir
 # SPOOL
 * Sistema operacional que decide isso, ele traduz pra linguagem da impressora e deixa o arquivo salvo até a impressão.
 Exemplo: Texto no word e manda imprimir, mesmo fechando o word, o arquivo continua na fila pra ser impressa 
-
-# Barramento
-* Linha que trafega os 0 e 1 na máquina, conunicando-se com todos os componentes de hardware 
-Ex: PCI-E
-DDR3 / DDR4 
 
 # Concorrência
 * Quando vários processos são utilizados, é dado a prioridade a processos do sistema, mantendo uma concorrência entre os processos de qual deverá continuar em funcionamento

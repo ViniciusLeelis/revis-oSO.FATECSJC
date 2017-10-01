@@ -72,18 +72,31 @@ A leitura é importânte, porém para a fixação dos conceitos é necessário f
 --------------------------------------------------------------------
 --------------------------------------------------------------------
  ## Sistemas com Múltiplos Processadores
- Sistemas com múltiplos processadores podem ser divididos em dois casos: fortemente acoplados e fracamente acoplados, a distinção de cada um deles se dá abaixo.
+ Sistemas com múltiplos processadores se caracterizam por terem mais de uma UCP (_Unidade de processamento central_) trabalhando em conjunto. Tal sistema possuem algumas caracteristicas importantes:
  
- * 
-     
+ * _Escalabilidade_: Ampliar a capacidade de processamento, simplesmente adicionando mais processadores, ao invez de alterar toda a arquitetura para a implementação de outro processador;
  
+ * _Disponibilidade_: Caso alguma falha ocorra, os outros processadores serão capaz de manter a tarefa ou o processo rodando. Possibilitando maior segurança para aplicações de alto risco;
+ 
+ * _Balanceamento de carga_: Evita a ociosidade entre um processador e outro, distribuindo os processos de forma mais equilibrada;
+  
+### Tipos de Sistemas com Múltiplos Processadores
+
+ * **Sistemas fortemente acoplados:**
+ Basicamente são vários processadores compartilhando uma memória e um sistema operacional, por isso são também conhecidos como multiprocessadores.
+Sistemas multiprocessados podem se dividir em:
+
+   * **SMP**: (_Symmetric Multiprocessors_) Possuem tempo de acesso a memória principal uniforme.
+   * **NUMA**: (_Non-Uniform Memory Access_) São conjuntos de processadores e memórias principais interconectados. O tempo de acesso a memória se dá pela localização física.
+ 
+ * **Sistemas fracamente acoplados:**
+ Também conhecidos como _Multiprocessadores_, possuem seu próprio sistema operacional, gerenciando seus próprios recursos. São independente entre sí.
+ 
+ Estes computadores são conectados entre sí, multas vezes pos cabos de conexão ethernet ou fibra ótica. 
+> A maior vantagem de sistemas fracamente acoplados é a escalabilidade, já que pode-se simplesmente conectar mais um computador para almentar o poder de processamento.
 
 
-     
-     Sistemas com múltiplos processadores
- * Sistemas fortemente acoplados
- * Sistemas fracamente acoplados
- * 
+-------------------------------------------------------------
 
 # CACHE
 * Armazena temporariamente, informações em um processador ou disco, mantendo durante um número maior de tempo em base dos processos mais importantes

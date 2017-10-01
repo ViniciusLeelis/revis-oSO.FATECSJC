@@ -121,18 +121,24 @@ Sistemas multiprocessados podem se dividir em:
 Linha que trafega os 0 e 1 na máquina, conunicando-se com todos os componentes de hardware 
 Ex: PCI-E
 DDR3 / DDR4 
- 
-* **Software:**
-Parte do computador em que descreve seu comportamento por meio de 0 e 1s, não podemos ver ou tocar, mas podemos observar seu comportamento por meio dos dispositivos de entrada e saída.
 
-# BUFFER
+### BUFFER
 * Armazena arquivos temporariamente do dispositivo em questão
 Exemplo: caixa de som, armazena um pouco do áudio pra depois reproduzir 
 
-# SPOOL
+### SPOOL
 * Sistema operacional que decide isso, ele traduz pra linguagem da impressora e deixa o arquivo salvo até a impressão.
 Exemplo: Texto no word e manda imprimir, mesmo fechando o word, o arquivo continua na fila pra ser impressa 
 
+ 
+* **Software:**
+Parte do computador em que descreve seu comportamento por meio de 0 e 1s, não podemos ver ou tocar, mas podemos observar seu comportamento por meio dos dispositivos de entrada e saída.
+   * Tradutor: Normalmente um programa ou um software é escrito em uma linguagem humanamente legível, o que faz necesário a tradução para 0s e 1s esse processo é denominado compilação ou tradução em português.
+   * Interpretador: Processo semelhante ao de compilar, ou traduzir, porém é realizado em tempo de execução. Enquanto o programa executa, o interpretador diz ao computador o que deve ser feito.
+   * Linker: É responsável por unir diferentes partes de um programa em um unico programa executável, é utilizado para unir as bibliotecas utilizadas ao programa principal.
+   * Loader: É responsável por carregar na memória o programa a ser executado.
+   * Depurador: Um utilitário para ajudar o usuário a encontrar erros sintáticos e lógicos no software a ser desenvolvido.
+   
 # Concorrência
 * Quando vários processos são utilizados, é dado a prioridade a processos do sistema, mantendo uma concorrência entre os processos de qual deverá continuar em funcionamento
 

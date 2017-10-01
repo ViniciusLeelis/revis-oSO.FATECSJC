@@ -1,23 +1,68 @@
 # revis-oSO.FATECSJC
 Um breve resumo da aula de Sistema Operacional
+## ROADMAP - Sistemas operacionais 
+
+ROADMAP para prova de sistemas operacionais
+
+### Leitura do livro - Arquitetura de Sistemas Operacionais 4ª Edição
+
+Fazer a leitura dos seguintes capitulos
+
+Capitulos
+* Conceitos básicos;
+* Conceitos de hardware e software;
+* Concorrência;
+* Estrutura do sistema operacional;
+* Processos;
+* Threads;
+* Sincronização e comunicação entre processos;
+* Gerência do processador.
+
+### Exercícios
+
+A leitura é importânte, porém para a fixação dos conceitos é necessário fazer todos os exercícios, abaixo vou listar os principais:
+
+* Página 22 e 23 - Exercícios 4, 14, 18, 19 e 20;
+* Página 39 - Exercícios 2, 6, 8 e 10;
+* Página 62 - Exercícios 1, 2, 4, 5, 6 e 8;
+* Página 84 - Exercícios (1, 2, 3), 4, (5, 6), 9;
+* Página 84 - Exercícios 10, 11, 13, 14, 15;
+* Página 94 - Exercícios 1, 2, 3;
+* Página 152 - Exercícios 12 a 18.
 
 
 
-# Tipos de sistemas operacionais
-  #  Sistemas monoprogramáveis / Monotarefa;
-      Os primeiros sistemas operacionais, realizavam apenas, uma tarefa por vez, fazendo que todo o potencial existente na maquina era reservado apenas para um processo, tais sistemas receberam o nome de sistemas monoprogramáveis (ou monotarefa)
-  #  Sistemas multiprogramáveis / Multitarefa;
-      Aqui já é diferente, ele é uma evolução dos sistemas monoprogramáveis, sendo possível a execução de mais de um processo por vez, e mesmo assim existe o compartilhamento de recursos da maquina.
- 
-      Podemos citar como exemplo:
+# PARTE 1 Conceitos Básicos
+  * O que é um Sistema Operacional ?
+     * Sistema Operacional, resumidamente é apenas um conjunto de rotinas executado pelo processador, podemos dizer que é semelhante aos programas dos usuários. Sua principal função é controlar o funcionamento de um computador, gerenciando a utilização e o compartilhamento dos seus diversos recursos, como processadores, memrias e dispositivos de entrada e saída
+  * Tipos de Sistemas Operacionais
   
-      Enquanto você está escrevendo em um arquivo de texto, e o sistema está captando todas essas informações, existe outro processo que está armazenando ou copiando arquivos em disco, detalhe: O custo é reduzido em comparação ao antigo monotarefa. Mesmo sendo mais rápido, ele acabou sendo mais complexo.
+  * * Sistemas Monoprogramáveis / Monotarefa
+  
+       * Foram os primeiros sistemas operacionais. São sistemas que pode-se executar apenas um programa por vez, para que outra aplicação fosse executada, deveria aguardar o término do programa corrente. Processador, memria e periféricos são de total exclusividade a execução de um único programa.
+         Sua implantação é extremamente simples, não existindo preocupação no compartilhamento de recursos, tais como memória, processador e dispositivos E/S
+         
+  * * Sistemas Multiprogramáveis / Multitarefa
+  
+      * Uma evolução dos antigos sistemas monoprogramáveis, aqui é diferente, os recursos computacionais são compartilhados entre aplicações e usuários. Enquanto um simples programa espera para ler ou gravar algo em disco, outros programas estão sendo processados no mesmo intervalo de tempo. O S.O se preocupa em gerenciar o acesso concorrente aos diversos recursos, de maneira ordenada e protegida. Suas vantagens: custo reduzido, redução total de tempo de execução dos programas. Desvantagens: mais complexo a implementação.
+      
+   * Ele pode ser dividido em três sistemas: batch, tempo compartilhado e tempo real.
    
-   # Os sistemas multitarefas podem ser divididos em três tipos: 
-   
-   # Sistema batch
-   # Sistemas de tempo real
-   # Sistemas de tempo compartilhado
+   * Sistema Batch:
+      * Primeiros tipos de sistema operacionais multiprogramáveis. Os programas(jobs) eram submetidos para execução usando           cartes perfurados e armazenados em disco ou fita, sendo guardados para serem processados. Os jobs eram executados,           produzindo uma saída em disco ou fita.
+        Ele não exige interação do usuário com a aplicação. Entradas e saídas de dados implementadas por memória                     secundária(geralmente arquivos em disco)
+        Quando bem projetados são eficientes, já que utilizam melhor o processador, só que o tempo de resposta pode ser               longo.
+        Exemplo de aplicações: envolvendo cálculos numericos, compilações, ordenações, backups e outros que não é necessário         o usuario.
+  * Sistemas de tempo compartilhado
+     * Os sistemas de tempo compartilhado, permitem que diversos programas sejam executados em pequenos intervalos definidos        pelo sistema operacional.
+       Esta forma de trabalho é bastante utilizada pelas aplicações corporativas, por oferecerem tempo de resposta e execução        bons. Neste sistema, o usuário pode interagir com o sistema operacional, utilizando mouse, teclado e vídeo.
+       Caso o tempo definido para uma aplicação não seja o suficiente, ela volta para a fila e outro processo entra em seu          lugar.
+      
+  * Sistema em tempo real
+     * A forma de implementação de sistemas de tempo real, porém com a diferença que o tempo separado para a execução da     aplicação é feito de forma muito rígida, e não é finalizado a qualquer momento, para um possível novo calculo do tempo, como é feito com o tempo compartilhado.
+ Aqui não existe a divisão do tempo, a aplicação pode levar o tempo que for necessário para rodar a aplicação, e todas as definições do tempo que será gasto, quais recursos serão utilizados, é definido pelo próprio programa que está executando, e  não pelo sistema operacional, assim como ocorre nos demais formatos citados acima.
+ É um tipo de sistema muito utilizado em aplicações críticas, como usinas nucleares e controle de tráfego aéreo.
+
      
      Sistemas com múltiplos processadores
  * Sistemas fortemente acoplados

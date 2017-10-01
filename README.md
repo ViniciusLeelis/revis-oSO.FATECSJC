@@ -32,7 +32,7 @@ A leitura é importânte, porém para a fixação dos conceitos é necessário f
 
 
 
-# PARTE 1 Conceitos Básicos
+# PARTE 1 Conceitos Básicos.
 
    * O que é um Sistema Operacional ?
      * Sistema Operacional, resumidamente é apenas um conjunto de rotinas executado pelo processador, podemos dizer que é semelhante aos programas dos usuários. Sua principal função é controlar o funcionamento de um computador, gerenciando a utilização e o compartilhamento dos seus diversos recursos, como processadores, memrias e dispositivos de entrada e saída

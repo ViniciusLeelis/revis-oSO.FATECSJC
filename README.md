@@ -31,68 +31,121 @@ A leitura é importânte, porém para a fixação dos conceitos é necessário f
 
 
 ### PARTE 1 Conceitos Básicos
-  * O que é um Sistema Operacional ?
+* O que é um Sistema Operacional ?
       Sistema Operacional, resumidamente é apenas um conjunto de rotinas executado pelo processador, podemos dizer que é semelhante aos programas dos usuários. Sua principal função é controlar o funcionamento de um computador, gerenciando a utilização e o compartilhamento dos seus diversos recursos, como processadores, memrias e dispositivos de entrada e saída
-  * Tipos de Sistemas Operacionais
-  
-  * * Sistemas Monoprogramáveis / Monotarefa
- 
-        Foram os primeiros sistemas operacionais. São sistemas que pode-se executar apenas um programa por vez, para que outra aplicação fosse executada, deveria aguardar o término do programa corrente. Processador, memria e periféricos são de total exclusividade a execução de um único programa.
+* Tipos de Sistemas Operacionais
+   * **Sistemas Monoprogramáveis / Monotarefa:**
+   Foram os primeiros sistemas operacionais. São sistemas que pode-se executar apenas um programa por vez, para que outra aplicação fosse executada, deveria aguardar o término do programa corrente. Processador, memria e periféricos são de total exclusividade a execução de um único programa.
  Sua implantação é extremamente simples, não existindo preocupação no compartilhamento de recursos, tais como memória, processador e dispositivos E/S
          
-  * * Sistemas Multiprogramáveis / Multitarefa
-  
-      Uma evolução dos antigos sistemas monoprogramáveis, aqui é diferente, os recursos computacionais são compartilhados entre aplicações e usuários. Enquanto um simples programa espera para ler ou gravar algo em disco, outros programas estão sendo processados no mesmo intervalo de tempo. O S.O se preocupa em gerenciar o acesso concorrente aos diversos recursos, de maneira ordenada e protegida. Suas vantagens: custo reduzido, redução total de tempo de execução dos programas. Desvantagens: mais complexo a implementação.
-      
-   * Ele pode ser dividido em três sistemas: batch, tempo compartilhado e tempo real.
+   * **Sistemas Multiprogramáveis / Multitarefa:**
+   Uma evolução dos antigos sistemas monoprogramáveis, aqui é diferente, os recursos computacionais são compartilhados entre aplicações e usuários. Enquanto um simples programa espera para ler ou gravar algo em disco, outros programas estão sendo processados no mesmo intervalo de tempo. O S.O se preocupa em gerenciar o acesso concorrente aos diversos recursos, de maneira ordenada e protegida. Suas vantagens: custo reduzido, redução total de tempo de execução dos programas. Desvantagens: mais complexo a implementação.
+ #### Sistemas Multiprogramáveis podem ser divididos em: batch, tempo compartilhado e tempo real.
    
-   * * Sistema Batch:
+ * **Sistema Batch:**
+   Primeiros tipos de sistema operacionais multiprogramáveis. Os programas(jobs) eram submetidos para execução usando          cartões perfurados e armazenados em disco ou fita, sendo guardados para serem processados. Os jobs eram executados,          produzindo uma saída em disco ou fita.
+     
+   Ele não exige interação do usuário com a aplicação. Entradas e saídas de dados implementadas por memória                    secundária(geralmente arquivos em disco).
    
-      * Primeiros tipos de sistema operacionais multiprogramáveis. Os programas(jobs) eram submetidos para execução usando           cartes perfurados e armazenados em disco ou fita, sendo guardados para serem processados. Os jobs eram executados,           produzindo uma saída em disco ou fita.
-        Ele não exige interação do usuário com a aplicação. Entradas e saídas de dados implementadas por memória                     secundária(geralmente arquivos em disco)
-        Quando bem projetados são eficientes, já que utilizam melhor o processador, só que o tempo de resposta pode ser               longo.
-        Exemplo de aplicações: envolvendo cálculos numericos, compilações, ordenações, backups e outros que não é necessário         o usuario.
-  * * Sistemas de tempo compartilhado
+   Quando bem projetados são eficientes, já que utilizam melhor o processador, só que o tempo de resposta pode ser             longo.
+   
+> Exemplo de aplicações: envolvendo cálculos numericos, compilações, ordenações, backups e outros que não é necessário        o usuario.
   
-      Os sistemas de tempo compartilhado, permitem que diversos programas sejam executados em pequenos intervalos definidos        pelo sistema operacional.
-       Esta forma de trabalho é bastante utilizada pelas aplicações corporativas, por oferecerem tempo de resposta e execução        bons. Neste sistema, o usuário pode interagir com o sistema operacional, utilizando mouse, teclado e vídeo.
-       Caso o tempo definido para uma aplicação não seja o suficiente, ela volta para a fila e outro processo entra em seu          lugar.
+  -------------------------------------------------------------
+  
+ * **Sistemas de tempo compartilhado:**
+  Os sistemas de tempo compartilhado, permitem que diversos programas sejam executados em pequenos intervalos definidos       pelo sistema operacional.
+     
+  Esta forma de trabalho é bastante utilizada pelas aplicações corporativas, por oferecerem tempo de resposta e execução      bons. Neste sistema, o usuário pode interagir com o sistema operacional, utilizando mouse, teclado e vídeo.
+  
+> Caso o tempo definido para uma aplicação não seja o suficiente, ela volta para a fila e outro processo entra em seu          lugar.
       
-  * * Sistema em tempo real
-  
-      A forma de implementação de sistemas de tempo real, porém com a diferença que o tempo separado para a execução da     aplicação é feito de forma muito rígida, e não é finalizado a qualquer momento, para um possível novo calculo do tempo, como é feito com o tempo compartilhado.
+--------------------------------------------------------------
+ * **Sistema em tempo real:**
+  A forma de implementação de sistemas de tempo real, porém com a diferença que o tempo separado para a execução da     aplicação é feito de forma muito rígida, e não é finalizado a qualquer momento, para um possível novo calculo do tempo, como é feito com o tempo compartilhado.
+ 
  Aqui não existe a divisão do tempo, a aplicação pode levar o tempo que for necessário para rodar a aplicação, e todas as definições do tempo que será gasto, quais recursos serão utilizados, é definido pelo próprio programa que está executando, e  não pelo sistema operacional, assim como ocorre nos demais formatos citados acima.
- É um tipo de sistema muito utilizado em aplicações críticas, como usinas nucleares e controle de tráfego aéreo.
  
- * Sistemas com Múltiplos Processadores
-     
+> É um tipo de sistema muito utilizado em aplicações críticas, como usinas nucleares e controle de tráfego aéreo.
+
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+ ## Sistemas com Múltiplos Processadores
+ Sistemas com múltiplos processadores se caracterizam por terem mais de uma UCP (_Unidade de processamento central_) trabalhando em conjunto. Tal sistema possuem algumas caracteristicas importantes:
  
+ * _Escalabilidade_: Ampliar a capacidade de processamento, simplesmente adicionando mais processadores, ao invez de alterar toda a arquitetura para a implementação de outro processador;
+ 
+ * _Disponibilidade_: Caso alguma falha ocorra, os outros processadores serão capaz de manter a tarefa ou o processo rodando. Possibilitando maior segurança para aplicações de alto risco;
+ 
+ * _Balanceamento de carga_: Evita a ociosidade entre um processador e outro, distribuindo os processos de forma mais equilibrada;
+  
+### Tipos de Sistemas com Múltiplos Processadores
+
+ * **Sistemas fortemente acoplados:**
+ Basicamente são vários processadores compartilhando uma memória e um sistema operacional, por isso são também conhecidos como multiprocessadores.
+Sistemas multiprocessados podem se dividir em:
+
+   * **SMP**: (_Symmetric Multiprocessors_) Possuem tempo de acesso a memória principal uniforme.
+   * **NUMA**: (_Non-Uniform Memory Access_) São conjuntos de processadores e memórias principais interconectados. O tempo de acesso a memória se dá pela localização física.
+ 
+ * **Sistemas fracamente acoplados:**
+ Também conhecidos como _Multiprocessadores_, possuem seu próprio sistema operacional, gerenciando seus próprios recursos. São independente entre sí.
+ 
+ Estes computadores são conectados entre sí, multas vezes pos cabos de conexão ethernet ou fibra ótica. 
+> A maior vantagem de sistemas fracamente acoplados é a escalabilidade, já que pode-se simplesmente conectar mais um computador para almentar o poder de processamento.
 
 
-     
-     Sistemas com múltiplos processadores
- * Sistemas fortemente acoplados
- * Sistemas fracamente acoplados
- * 
+-------------------------------------------------------------
 
-# CACHE
-* Armazena temporariamente, informações em um processador ou disco, mantendo durante um número maior de tempo em base dos processos mais importantes
+# HARDWARE E SOFTWARE
 
-# BUFFER
-* Armazena arquivos temporariamente do dispositivo em questão
-Exemplo: caixa de som, armazena um pouco do áudio pra depois reproduzir 
-
-# SPOOL
-* Sistema operacional que decide isso, ele traduz pra linguagem da impressora e deixa o arquivo salvo até a impressão.
-Exemplo: Texto no word e manda imprimir, mesmo fechando o word, o arquivo continua na fila pra ser impressa 
-
-# Barramento
-* Linha que trafega os 0 e 1 na máquina, conunicando-se com todos os componentes de hardware 
+* **Hardware:** É a parte física, na maioria das vezes composta por [transistores](https://pt.wikipedia.org/wiki/Trans%C3%ADstor)
+   * Processador:
+   É responsável por executar e controlar instruções presentes na memória peincipal, através de operações aritmética (soma, subtração, divisão, multiplicação) e lógicas (comparações lóicas: E, OU, NÃO) e movimentação de dados.
+   Um processador é composto de três componentes:
+      * Unidade lógica aritmética: Realiza as instruções desejada, como somar, comparar bits entre outras instruções presente na unidade;
+      * Unidade de controle: Responsável pela gravação de dados em disco, buscar próximas instruções na memórias, entre outros.
+      * Registradores: Armazena resultados entre uma operação e outra.
+   * Memória Principal:
+   Onde as instruções e variáveis são armazenados enquanto necessárias para o processamento. Uma memória é organizada em celulas e o tamanho máximo é definido pela largura do barramento 2³² em um sistema com barramento de 32 bits.
+   
+   O endereço que será acessado é dado a partir de um registrador especifico, o MAR (Memory Address Register). Há também o MBR (Memory Buffer Register) que é usado para armazenar dados temporários ou antes de uma transferência para o disco.
+   * Memória Secundária:
+   Meio para manter o dado armazenado de forma relativamente permanente, atualmente o meio mais utilizado é o HD.
+   * Memória Cache:
+   Armazena temporariamente, informações em um processador ou disco, mantendo durante um número maior de tempo em base dos processos mais importantes
+   * Dispositivos de entrada e saída:
+   TODO
+   * Barramento:
+Linha que trafega os 0 e 1 na máquina, conunicando-se com todos os componentes de hardware 
 Ex: PCI-E
 DDR3 / DDR4 
 
+### BUFFER
+* Armazena arquivos temporariamente do dispositivo em questão
+Exemplo: caixa de som, armazena um pouco do áudio pra depois reproduzir 
+
+### SPOOL
+* Sistema operacional que decide isso, ele traduz pra linguagem da impressora e deixa o arquivo salvo até a impressão.
+Exemplo: Texto no word e manda imprimir, mesmo fechando o word, o arquivo continua na fila pra ser impressa 
+
+ 
+* **Software:**
+Parte do computador em que descreve seu comportamento por meio de 0 e 1s, não podemos ver ou tocar, mas podemos observar seu comportamento por meio dos dispositivos de entrada e saída.
+   * Tradutor: Normalmente um programa ou um software é escrito em uma linguagem humanamente legível, o que faz necesário a tradução para 0s e 1s esse processo é denominado compilação ou tradução em português.
+   * Interpretador: Processo semelhante ao de compilar, ou traduzir, porém é realizado em tempo de execução. Enquanto o programa executa, o interpretador diz ao computador o que deve ser feito.
+   * Linker: É responsável por unir diferentes partes de um programa em um unico programa executável, é utilizado para unir as bibliotecas utilizadas ao programa principal.
+   * Loader: É responsável por carregar na memória o programa a ser executado.
+   * Depurador: Um utilitário para ajudar o usuário a encontrar erros sintáticos e lógicos no software a ser desenvolvido.
+   
 # Concorrência
-* Quando vários processos são utilizados, é dado a prioridade a processos do sistema, mantendo uma concorrência entre os processos de qual deverá continuar em funcionamento
+Sistemas multiprogramaveis, diminuem a osciosidade do processador. Quando vários processos são utilizados, é dado a prioridade a processos do sistema, mantendo uma concorrência entre os processos de qual deverá continuar em funcionamento. 
+
+## Interrupções e Exceções
+TODO- não prioritário
+
+## Operações de Entrada e Saída
 
 
 # Kernel
